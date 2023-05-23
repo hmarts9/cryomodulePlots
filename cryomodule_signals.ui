@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>924</width>
-    <height>696</height>
+    <width>988</width>
+    <height>778</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,7 +89,7 @@
        <string/>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="1">
+       <item row="5" column="1">
         <widget class="PyDMTimePlot" name="plot_decarad">
          <property name="toolTip">
           <string/>
@@ -126,98 +126,8 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="PyDMTimePlot" name="plot_homus_temp">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist/>
-         </property>
-         <property name="title" stdset="0">
-          <string>Upstream HOM temperatures</string>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="curves">
-          <stringlist/>
-         </property>
-         <property name="updatesAsynchronously">
-          <bool>true</bool>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="PyDMTimePlot" name="plot_steppertemps">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="title" stdset="0">
-          <string>Stepper temperatures</string>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="updatesAsynchronously">
-          <bool>true</bool>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="PyDMTimePlot" name="plot_couplerbot_temp">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="title" stdset="0">
-          <string>Coupler bottom temperatures</string>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="updatesAsynchronously">
-          <bool>true</bool>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="PyDMTimePlot" name="plot_cryosignals">
+       <item row="5" column="0">
+        <widget class="PyDMArchiverTimePlot" name="plot_cryosignals">
          <property name="toolTip">
           <string/>
          </property>
@@ -229,72 +139,32 @@
          </property>
          <property name="yAxes">
           <stringlist>
-           <string>{&quot;name&quot;: &quot;jt&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;JT (%)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+           <string>{&quot;name&quot;: &quot;jt&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;JT (%)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
            <string>{&quot;name&quot;: &quot;ds&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;DS Level (%)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
            <string>{&quot;name&quot;: &quot;us&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;US Level (%)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-           <string>{&quot;name&quot;: &quot;press&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;DS Pressure (mbar)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
-           <string>{&quot;name&quot;: &quot;heat&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: &quot;Heater (W)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+           <string>{&quot;name&quot;: &quot;press&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;DS Pressure (mbar)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+           <string>{&quot;name&quot;: &quot;heat&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;Heater (W)&quot;, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
           </stringlist>
          </property>
          <property name="title" stdset="0">
-          <string>Cryo signals</string>
+          <string>Cryo Signals</string>
          </property>
          <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="curves">
-          <stringlist/>
-         </property>
-         <property name="updatesAsynchronously">
           <bool>true</bool>
          </property>
          <property name="updateMode" stdset="0">
           <enum>PyDMTimePlot::AtFixedRate</enum>
          </property>
          <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="PyDMTimePlot" name="plot_cmvacuum">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist>
-           <string>{&quot;name&quot;: &quot;!96&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
-           <string>{&quot;name&quot;: &quot;x96&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: null}</string>
-          </stringlist>
-         </property>
-         <property name="title" stdset="0">
-          <string>Vacuum signals</string>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
+          <double>6000.000000000000000</double>
          </property>
          <property name="curves">
           <stringlist/>
-         </property>
-         <property name="updatesAsynchronously">
-          <bool>true</bool>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="PyDMTimePlot" name="plot_amps">
+        <widget class="PyDMArchiverTimePlot" name="plot_couplerbot_temp">
          <property name="toolTip">
           <string/>
          </property>
@@ -305,49 +175,9 @@
           <bool>true</bool>
          </property>
          <property name="title" stdset="0">
-          <string>Amplitudes</string>
+          <string>Coupler Bottom Temperatures</string>
          </property>
          <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="updatesAsynchronously">
-          <bool>true</bool>
-         </property>
-         <property name="updateMode" stdset="0">
-          <enum>PyDMTimePlot::AtFixedRate</enum>
-         </property>
-         <property name="timeSpan">
-          <double>600.000000000000000</double>
-         </property>
-         <property name="autoRangeY">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="PyDMTimePlot" name="plot_homds_temp">
-         <property name="toolTip">
-          <string/>
-         </property>
-         <property name="showXGrid">
-          <bool>true</bool>
-         </property>
-         <property name="showYGrid">
-          <bool>true</bool>
-         </property>
-         <property name="yAxes">
-          <stringlist/>
-         </property>
-         <property name="title" stdset="0">
-          <string>Downstream HOM temperatures</string>
-         </property>
-         <property name="showLegend">
-          <bool>true</bool>
-         </property>
-         <property name="curves">
-          <stringlist/>
-         </property>
-         <property name="updatesAsynchronously">
           <bool>true</bool>
          </property>
          <property name="updateMode" stdset="0">
@@ -359,7 +189,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="PyDMTimePlot" name="plot_couplertop_temp">
+        <widget class="PyDMArchiverTimePlot" name="plot_couplertop_temp">
          <property name="toolTip">
           <string/>
          </property>
@@ -370,12 +200,143 @@
           <bool>true</bool>
          </property>
          <property name="title" stdset="0">
-          <string>Coupler top temperatures</string>
+          <string>Coupler Top Temperatures</string>
          </property>
          <property name="showLegend">
           <bool>true</bool>
          </property>
-         <property name="updatesAsynchronously">
+         <property name="updateMode" stdset="0">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="PyDMArchiverTimePlot" name="plot_homus_temp">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="title" stdset="0">
+          <string>Upstream HOM Temperatures</string>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="updateMode" stdset="0">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="PyDMArchiverTimePlot" name="plot_cmvacuum">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;!96&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+           <string>{&quot;name&quot;: &quot;x96&quot;, &quot;orientation&quot;: &quot;right&quot;, &quot;label&quot;: null, &quot;minRange&quot;: -1.0, &quot;maxRange&quot;: 1.0, &quot;autoRange&quot;: true, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
+         <property name="title" stdset="0">
+          <string>Vacuum Signals</string>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="updateMode" stdset="0">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+         <property name="curves">
+          <stringlist/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="PyDMArchiverTimePlot" name="plot_steppertemps">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="title" stdset="0">
+          <string>Stepper Temperatures</string>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="updateMode" stdset="0">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="PyDMArchiverTimePlot" name="plot_homds_temp">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="title" stdset="0">
+          <string>Downstream HOM Temperatures</string>
+         </property>
+         <property name="showLegend">
+          <bool>true</bool>
+         </property>
+         <property name="updateMode" stdset="0">
+          <enum>PyDMTimePlot::AtFixedRate</enum>
+         </property>
+         <property name="timeSpan">
+          <double>600.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="PyDMArchiverTimePlot" name="plot_amps">
+         <property name="toolTip">
+          <string/>
+         </property>
+         <property name="showXGrid">
+          <bool>true</bool>
+         </property>
+         <property name="showYGrid">
+          <bool>true</bool>
+         </property>
+         <property name="title" stdset="0">
+          <string>Cavity Amplitudes</string>
+         </property>
+         <property name="showLegend">
           <bool>true</bool>
          </property>
          <property name="updateMode" stdset="0">
@@ -403,8 +364,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>898</width>
-         <height>239</height>
+         <width>968</width>
+         <height>281</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -560,6 +521,11 @@
    <class>PyDMTimePlot</class>
    <extends>QGraphicsView</extends>
    <header>pydm.widgets.timeplot</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMArchiverTimePlot</class>
+   <extends>PyDMTimePlot</extends>
+   <header>pydm.widgets.archiver_time_plot</header>
   </customwidget>
  </customwidgets>
  <resources/>
