@@ -336,6 +336,11 @@
          <property name="title" stdset="0">
           <string>Cavity Amplitudes</string>
          </property>
+         <property name="yAxes">
+          <stringlist>
+           <string>{&quot;name&quot;: &quot;amp&quot;, &quot;orientation&quot;: &quot;left&quot;, &quot;label&quot;: &quot;Amplitude (MV)&quot;, &quot;minRange&quot;: 0.0, &quot;maxRange&quot;: 160.0, &quot;autoRange&quot;: false, &quot;logMode&quot;: false}</string>
+          </stringlist>
+         </property>
          <property name="showLegend">
           <bool>true</bool>
          </property>
